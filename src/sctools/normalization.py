@@ -6,10 +6,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from scipy import sparse, io
 from scipy.stats.mstats import gmean
 from scipy.linalg import helmert
-from sklearn.decomposition import TruncatedSVD
 import statsmodels.api as sm
 import anndata as ad
 

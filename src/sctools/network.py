@@ -15,7 +15,6 @@ from __future__ import absolute_import
 import collections
 import itertools
 import sys
-import re
 import numpy as np
 
 import Levenshtein

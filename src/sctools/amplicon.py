@@ -1,27 +1,10 @@
-import itertools
-import math
-import os
-import loompy
 import h5py
 import copy
-import umap
 import numpy as np
 import pandas as pd
 
 
-from collections import Counter
 import seaborn as sns; sns.set(style="white", color_codes=True)
-import matplotlib
-import matplotlib.colors as mcol
-from scipy.stats import spearmanr
-from scipy.spatial.distance import pdist, squareform
-from scipy.cluster.hierarchy import dendrogram, linkage, fcluster
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.decomposition import PCA
-from IPython.display import display, HTML
-from matplotlib.ticker import NullFormatter
-from scipy.stats import binned_statistic
-from IPython.display import display, HTML
 import matplotlib.pyplot as plt
 from scipy.sparse import csr_matrix
 import scipy.cluster.hierarchy as sch
@@ -113,7 +96,7 @@ class Cluster_cells(object):
     def make_cluster(self, method, data=None, cmap=plt.cm.YlGnBu):
         """rr"""
         try:
-            if data == None: pass
+            if data is None: pass
             dat = self.m_cell_idt.sum(axis=0)
         except ValueError:
             dat = data

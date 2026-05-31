@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import os
-import sys
 import argparse
 import pathlib
 import subprocess
@@ -22,7 +21,7 @@ if __name__ == "__main__":
         
     args = parser.parse_args()
     
-    output = os.path.abspath(args.output) if args.output != None else os.path.abspath(os.getcwd())
+    output = os.path.abspath(args.output) if args.output is not None else os.path.abspath(os.getcwd())
     pathlib.Path(output).mkdir(parents=True, exist_ok=True)
     
     fastq_files_prefix_R1 = list(set([i.split('L00')[0] for i in os.listdir(args.input) if '_R1_' in i]))

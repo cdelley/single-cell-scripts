@@ -11,7 +11,6 @@ import shlex
 import gzip
 import matplotlib.pyplot as plt
 
-import Levenshtein
 from scipy.signal import savgol_filter
 from scipy.signal import find_peaks
 
@@ -204,7 +203,7 @@ class seq_experiment(object):
             cells = np.array(cells)
             
             fig, (ax1, ax2) = plt.subplots(2,1, figsize=(8,8), sharex=True)
-            l1 = ax1.plot(np.sort(cells[cells>5])[::-1])
+            ax1.plot(np.sort(cells[cells>5])[::-1])
             ax1.plot([n_cells, n_cells],[300, np.max(cells)], 'k:')
             ax1.set_yscale('log')
             ax1.set_xscale('log')

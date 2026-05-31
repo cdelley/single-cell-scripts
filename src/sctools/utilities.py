@@ -256,7 +256,6 @@ import random
 import uuid
 import tempfile
 
-from builtins import bytes, chr
 
 
 class DefaultOptions:

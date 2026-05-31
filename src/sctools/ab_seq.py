@@ -3,23 +3,18 @@ Created on Tue Nov 28 18:12:22 2017
 
 @author: cyrille
 """
-import random
 import Levenshtein
 
 import numpy as np
 import os
 
-import subprocess
-import shlex
 import gzip
-import codecs
 from collections import Counter
 import itertools
 import anndata as ad
 
 #from UMItools
 from . import network
-from . import utilities as U
 
 
 def levenshtein_ensemble(barcode_list, max_distance):
@@ -127,7 +122,7 @@ class Phag_experiment(object):
         inst.inv_map_phag = {v: k for k, v in inst.phag_dic.items()}
         inst.phag_enumerate = dict((seq, idx) for (idx, seq) in enumerate(inst.phag_dic.values()))
         inst.inv_enum_phag = {v: k for k, v in inst.phag_enumerate.items()}
-        phag_len = len(list(phage_dict.values())[0])
+        len(list(phage_dict.values())[0])
         
         # collect some data to log read statistics, not reported currently
         output_result = np.zeros(6)
@@ -210,7 +205,7 @@ class Phag_experiment(object):
         inst.inv_map_phag = {v: k for k, v in inst.phag_dic.items()}
         inst.phag_enumerate = dict((seq, idx) for (idx, seq) in enumerate(inst.phag_dic.values()))
         inst.inv_enum_phag = {v: k for k, v in inst.phag_enumerate.items()}
-        phag_len = len(list(phage_dict.values())[0])
+        len(list(phage_dict.values())[0])
         
         # collect some data to log read statistics, not reported currently
         output_result = np.zeros(7)

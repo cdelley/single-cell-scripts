@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
-import sys, argparse
+import sys
+import argparse
 
 def create_transcript_list(input, use_name = True, use_version = True):
     r = {}
