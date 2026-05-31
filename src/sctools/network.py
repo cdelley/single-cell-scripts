@@ -19,7 +19,7 @@ import re
 import numpy as np
 
 import Levenshtein
-import Utilities as U
+from . import utilities as U
 
 sys.setrecursionlimit(10000)
 

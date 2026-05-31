@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sctools"
+version = "0.1.0"
+description = "Single-cell sequencing analysis tools: barcode correction, UMI clustering, amplicon processing, compositional normalization"
+authors = [
+    { name = "Cyrille L. Delley" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "pandas",
+    "scikit-learn",
+    "statsmodels",
+    "anndata",
+    "loompy",
+    "h5py",
+    "umap-learn",
+    "seaborn",
+    "ipython",
+    "python-Levenshtein",
+    "future",
+]
+
+[project.optional-dependencies]
+genotyping = [
+    "scikit-allel",
+]
+dev = [
+    "pytest",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sctools"]

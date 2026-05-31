@@ -18,8 +18,8 @@ import itertools
 import anndata as ad
 
 #from UMItools
-import network
-import Utilities as U
+from . import network
+from . import utilities as U
 
 
 def levenshtein_ensemble(barcode_list, max_distance):
